@@ -1,5 +1,5 @@
 
-import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
+import { GoogleGenerativeAI, GenerateContentResponse } from "@google/generative-ai";
 import { MovieData, BoxOfficeProjection } from "../types";
 import { HISTORICAL_MOVIES } from "./backtestData";
 
@@ -212,7 +212,7 @@ export const fetchUpcomingMovies2026 = async (): Promise<MovieData[]> => {
 
 export const generateProjection = async (movie: MovieData): Promise<BoxOfficeProjection> => {
   if (!process.env.API_KEY) throw new Error("API Key missing");
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const ai = new GoogleGenerativeAI({ apiKey: process.env.API_KEY });
 
   const prompt = `
     You are an autonomous Box Office Prediction Engine combining two methodologies:
@@ -305,7 +305,7 @@ export const generateProjection = async (movie: MovieData): Promise<BoxOfficePro
 // New function for running backtests
 export const generateBacktestPrediction = async (movie: MovieData & { releaseYear: number, actualWorldwide: number }): Promise<BoxOfficeProjection> => {
     if (!process.env.API_KEY) throw new Error("API Key missing");
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    const ai = new GoogleGenerativeAI({ apiKey: process.env.API_KEY });
   
     const prompt = `
       BACKTEST SIMULATION MODE

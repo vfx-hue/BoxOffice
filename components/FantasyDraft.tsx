@@ -124,7 +124,7 @@ const FantasyDraft: React.FC<FantasyDraftProps> = ({ projections }) => {
                 Winter 2026 League
             </h2>
             <p className="text-sm text-gray-600 mt-1">
-                Draft Goal: Maximize Profit (>2.5x Budget) + Pick 1 Strategic Bomb.
+                Draft Goal: Maximize Profit (&gt;2.5x Budget) + Pick 1 Strategic Bomb.
             </p>
         </div>
         <div className="flex items-center gap-4 w-full md:w-auto">
