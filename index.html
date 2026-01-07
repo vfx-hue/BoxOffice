@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BoxOfficeOracle 2026</title>
@@ -28,9 +28,9 @@
                 900: '#111827',
               },
               accent: {
-                light: '#e0e7ff', // indigo-100
-                DEFAULT: '#4338ca', // indigo-700
-                dark: '#312e81', // indigo-900
+                light: '#e0e7ff',
+                DEFAULT: '#4338ca',
+                dark: '#312e81',
               }
             }
           }
@@ -39,39 +39,37 @@
     </script>
     <style>
       body {
-        background-color: #f9fafb; /* gray-50 */
-        color: #111827; /* gray-900 */
+        background-color: #ffffff;
+        color: #000000;
+        -webkit-font-smoothing: antialiased;
       }
-      /* Custom Scrollbar - Minimalist */
-      ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: transparent; 
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #d1d5db; 
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #9ca3af; 
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar { width: 6px; height: 6px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: #000000; border-radius: 0px; }
+      
+      .draft-hover:hover {
+        background-color: #000000;
+        color: #ffffff !important;
       }
     </style>
-  <script type="importmap">
+    <script type="importmap">
 {
   "imports": {
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.32.0",
-    "react/": "https://aistudiocdn.com/react@^19.2.1/",
-    "react": "https://aistudiocdn.com/react@^19.2.1",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
-    "recharts": "https://aistudiocdn.com/recharts@^3.5.1"
+    "react": "https://esm.sh/react@18.3.1",
+    "react-dom": "https://esm.sh/react-dom@18.3.1",
+    "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.446.0",
+    "recharts": "https://esm.sh/recharts@2.13.0",
+    "@google/genai": "https://esm.sh/@google/genai@0.2.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
   }
 }
 </script>
 </head>
-  <body>
+<body>
     <div id="root"></div>
-  </body>
+    <script type="module" src="./index.tsx"></script>
+</body>
 </html>

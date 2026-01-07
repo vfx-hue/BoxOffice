@@ -4,7 +4,7 @@ import { MovieData, BoxOfficeProjection } from "../types";
 import { HISTORICAL_MOVIES } from "./backtestData";
 
 // Helper to sanitize JSON strings from markdown blocks or other text
-const cleanJson = (text: string): string => {
+const cleanJson = (text: string | undefined): string => {
   if (!text) return "{}";
   // Remove markdown code blocks
   let cleaned = text.replace(/```json/g, '').replace(/```/g, '');
